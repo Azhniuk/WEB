@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Nunito';
-    src: url(WheatherApp/Nunito/Nunito-Italic-VariableFont_wght.ttf);
+    font-family: 'Nunito-LightItalic';
+    src: url(Nunito/static/Nunito-LightItalic.ttf);
   }
   
   
@@ -35,7 +35,7 @@ li {
  }
 
  .temperature {
-    font-family: 'Nunito' ;
+    font-family: 'Nunito-LightItalic' ;
     color: rgb(87, 0, 0);
     
     
