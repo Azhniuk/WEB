@@ -1,0 +1,34 @@
+form{
+    padding: 5px 0px 10px;
+}
+
+
+.cityName{
+    color:rgb(0, 147, 176);
+    font-family: 'Courier New', Courier, monospace;
+    
+    
+}
+h2{
+    color: rgb(0, 70, 176);
+}
+.card{
+    top: 16px;
+    width: 36em;
+    margin: 0 auto;
+
+}
+li {
+     color: #7c7c7c;
+     font-size: 16px;
+     font-weight: 100;
+     height: 19px;
+     line-height: 1;
+     list-style: none;
+ }
+
+ .temp {
+    font-size: large;
+    color: black;
+    
+ }
