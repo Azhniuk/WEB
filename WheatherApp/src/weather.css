@@ -1,4 +1,10 @@
-form{
+@font-face {
+    font-family: 'Nunito';
+    src: url(WheatherApp/Nunito/Nunito-Italic-VariableFont_wght.ttf);
+  }
+  
+  
+  form{
     padding: 5px 0px 10px;
 }
 
@@ -20,6 +26,7 @@ h2{
 }
 li {
      color: #7c7c7c;
+    
      font-size: 16px;
      font-weight: 100;
      height: 19px;
@@ -27,8 +34,9 @@ li {
      list-style: none;
  }
 
- .temp {
-    font-size: large;
-    color: black;
+ .temperature {
+    font-family: 'Nunito' ;
+    color: rgb(87, 0, 0);
+    
     
  }
