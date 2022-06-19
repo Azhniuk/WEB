@@ -37,11 +37,13 @@ li {
  .temperature {
     font-family: 'Nunito-LightItalic' ;
     color: rgb(87, 0, 0);
+    font-size:1cm;
     
     
  }
  .madeBy{
+    
+    margin: 70 px;
+    position:fixed;
     text-align: center;
-    margin: 20px;
-    position:static;
  }
