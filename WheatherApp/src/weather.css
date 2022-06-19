@@ -40,3 +40,8 @@ li {
     
     
  }
+ .madeBy{
+    text-align: center;
+    margin: 20px;
+    position:static;
+ }
