@@ -10,8 +10,9 @@
 
 
 .cityName{
-    color:rgb(0, 147, 176);
+    color:rgb(2, 94, 112);
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
     
     
 }
@@ -36,7 +37,7 @@ li {
 
  .temperature {
     font-family: 'Nunito-LightItalic' ;
-    color: rgb(87, 0, 0);
+    color: rgb(60, 20, 123);
     font-size:1cm;
     
     
@@ -44,6 +45,21 @@ li {
  .madeBy{
     
     margin: 20px;
-    position:sticky;
+
+    position:static;
     text-align: center;
+ }
+
+ .lastDate{
+    color:rgb(0, 147, 176);
+    font-family: 'Courier New', Courier, monospace;
+ }
+
+.container{
+    
+}
+
+ .col{
+    padding: 5px;
+    
  }
