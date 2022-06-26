@@ -14,6 +14,17 @@ function search(event) {
   axios.get(apiUrl).then(searchWeather);
 }
 
+
+
+function draw() {
+  const canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    const ctx = canvas.getContext('2d');
+    
+  }
+}
+
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
