@@ -43,7 +43,7 @@ li {
  }
  .madeBy{
     
-    margin: 70 px;
-    position:fixed;
+    margin: 20px;
+    position:sticky;
     text-align: center;
  }
