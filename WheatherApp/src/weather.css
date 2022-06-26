@@ -2,23 +2,43 @@
     font-family: 'Nunito-LightItalic';
     src: url(Nunito/static/Nunito-LightItalic.ttf);
   }
+
+
   
   
   form{
     padding: 5px 0px 10px;
+    
 }
 
+a{
+    color:black;
+}
+
+
+.card-body{
+  
+    background-color: hwb(60 82% 0%);;
+    
+}
 
 .cityName{
-    color:rgb(2, 94, 112);
-    font-family: 'Courier New', Courier, monospace;
+    color:rgb(3, 175, 210);
+    font-family:  'Nunito-LightItalic' ;
     font-weight: bold;
-    
+    font-size:large;
+    margin:0;
     
 }
-h2{
-    color: rgb(0, 70, 176);
-}
+
+.lastDate{
+    color:rgb(0, 147, 176);
+    font-family: 'Nunito-LightItalic' ;
+    font-size:medium;
+    /* margin:0; */
+ }
+
+
 .card{
     top: 16px;
     width: 36em;
@@ -42,19 +62,14 @@ li {
     
     
  }
- .madeBy{
+
+ 
+
+ .additional{
+    margin:10px;
+    font-size:x-large;   
     
-    margin: 20px;
-
-    position:static;
-    text-align: center;
  }
-
- .lastDate{
-    color:rgb(0, 147, 176);
-    font-family: 'Courier New', Courier, monospace;
- }
-
 .container{
     
 }
@@ -63,3 +78,13 @@ li {
     padding: 5px;
     
  }
+
+
+
+ .madeBy{
+    
+    margin: 20px;
+    position:static;
+    text-align: center;
+ }
+
