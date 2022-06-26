@@ -18,12 +18,12 @@ a{
 
 .card-body{
   
-    background-color: hwb(60 82% 0%);;
+    background-color: hwb(187 53% 0% / 0.14);;
     
 }
 
 .cityName{
-    color:rgb(3, 175, 210);
+    color:rgb(148, 148, 148);
     font-family:  'Nunito-LightItalic' ;
     font-weight: bold;
     font-size:large;
@@ -32,7 +32,7 @@ a{
 }
 
 .lastDate{
-    color:rgb(0, 147, 176);
+    color:rgb(113, 113, 113);
     font-family: 'Nunito-LightItalic' ;
     font-size:medium;
     /* margin:0; */
@@ -45,19 +45,33 @@ a{
     margin: 0 auto;
 
 }
-li {
-     color: #7c7c7c;
-    
-     font-size: 16px;
-     font-weight: 100;
-     height: 19px;
-     line-height: 1;
-     list-style: none;
+h1 {
+    color: #878787;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  
+    color: rgb(135, 135, 135);
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 19px;
  }
 
  .temperature {
     font-family: 'Nunito-LightItalic' ;
-    color: rgb(60, 20, 123);
+    color: rgb(31, 31, 31);
     font-size:1cm;
     
     
