@@ -35,7 +35,12 @@ a{
     color:rgb(113, 113, 113);
     font-family: 'Nunito-LightItalic' ;
     font-size:medium;
-    /* margin:0; */
+   
+ }
+
+ .additional{
+  text-transform: lowercase;
+
  }
 
 
@@ -80,6 +85,8 @@ ul {
     font-family: 'Nunito-LightItalic' ;
     color: rgb(31, 31, 31);
     font-size:1cm;
+    margin: 10px;
+    position:relative;
     
     
  }

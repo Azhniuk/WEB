@@ -1,4 +1,4 @@
-function searchWeather(response) {
+function searchWeather(response) {  //returns the real weather data
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = `${Math.round(response.data.main.temp)}°C`;
@@ -7,11 +7,22 @@ function searchWeather(response) {
 
   document.querySelector("#description").innerHTML = `${response.data.weather[0].description }`;
 
+
+ // document.querySelector("#today").innerHTML = dateForNow(response.data.dt*1000);
 }
 
 
 
-function search(event) {
+// function dateForNow(timeNow){
+//   let date = new Date(timeNow);
+//   let hours = date.getHours();
+//   let minutes = date.getMinutes();
+//   let day = date.getDay();
+//   return `${day} ${hours}:${minutes}`;
+// }
+
+
+function search(event) { //search the city 
   event.preventDefault();
   let cityName = document.querySelector("#city-input").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
@@ -22,14 +33,6 @@ function search(event) {
 
 
 
-function draw() {
-  const canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
-
-  }
-}
-
 
 
 
@@ -39,7 +42,7 @@ let apiKey = "9501a68da2d700b9b0fb729939635887";
 
 
 
-let form = document.querySelector("#search-form");
+let form = document.querySelector("#search-form");  //search form
 form.addEventListener("submit", search);
 
 
@@ -65,3 +68,4 @@ let days = [
 
 
 dateNow.innerHTML = `${days[dayNum]}  ${hours}:${minutes}`;
+
