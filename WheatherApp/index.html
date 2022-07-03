@@ -20,77 +20,78 @@
        
         <div class="container">
           <div class ="weather-app">
+
           <form id="search-form">
             <input type="text" placeholder="City" id="city-input" />
             <input type="submit" value="Search" />
           </form>
 
           <div class="row">
-            <div class="col-8">
-              <h1 class="cityName" id="city">
-                Sydney NSW, Australia
-              </h1>
+            
+            
+<div class="col-8">
+    <ul>
+        <li class="cityName" id="city">
+            Sydney NSW, Australia
+        </li>
                 
-                  <div  class = "lastDate">Last updated: 
-                  <span id="date">
-                    Tuesday 16:00
-                  </span>
-                  </div>
-                  <h2 id = "description">
-                    Sunny
-                  </h2>
+        <li  class = "lastDate">Last updated: 
+            <span id="date">
+            Tuesday 16:00
+            </span>
+        </li>
+                  
+        <li id = "description">
+            Sunny
+        </li>
 
-                <div class="clearfix weather-temperature">
-                  <div>
-                    <strong class = "temperature" id="temperature">
-                      <image 
-                      
-                      src = "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                      class = "mainImage"
-                      alt = "partly_cloudy"
-                      />
-                      
-                    20</strong>
+        <li class="clearfix weather-temperature">
+           
+                <strong class = "temperature" id="temperature">
+                  <image 
+                  src = "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  class = "mainImage"
+                  alt = "partly_cloudy"
+                  />
+                20</strong>
+            
+
+          <small class = "CF">  
+             <a href="#" id="celsius-link" class="active">°C</a> |
+             <a href="#" id="fahrenheit-link">°F</a>
+          </small>
+        </li>
+      </ul>
+</div>
 
 
-                   <small class = "CF">  
-                    <a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a>
-                   </small>
 
-
-                  </div>
-                 
-                </div>
-          
-              </div>
                
-        
+<div class="col-4">
+  <ul>
+          <li>
+            Precipitation: <span id = "precipitation">0%</span> 
+          </li>
+          <li>
+            Humidity: <span id = "humidity">77%</span>  
+          </li>
+          <li>
+            Wind: <span id = "wind">8 km/h</span> 
+          </li>
+  </ul>
+         
+  
 
-            <div class="col">
-              <ul>
-                <li>
-                  Precipitation: <span id = "precipitation">0%</span> 
-                </li>
-                <li>
-                  Humidity: <span id = "humidity">77%</span>  
-                </li>
-                <li>
-                  Wind: <span id = "wind">8 km/h</span> 
-                </li>
-              </ul>
-              
-            </div>
-          </div>
+      </div>
+    </div>
 
           
 
           </div>
-         
-
         </div>
       </div>
      </div>
+
 
      <small class = "madeBy">
       <a href="https://github.com/Azhniuk/SheCodesR"> Open-sousce code</a>

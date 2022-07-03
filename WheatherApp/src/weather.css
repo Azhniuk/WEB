@@ -6,8 +6,8 @@
 
   
   
-  form{
-    padding: 5px 0px 10px;
+form{
+  padding: 5px 0px 10px;
     
 }
 
@@ -45,18 +45,24 @@ a{
     margin: 0 auto;
 
 }
+body {
+  font-family: arial, sans-serif;
+}
+
 h1 {
-    color: #878787;
-    font-size: 24px;
-    font-weight: 100;
-    line-height: 28px;
-    margin-bottom: 0;
-  }
-  
-  ul {
-    margin: 0;
-    padding: 0;
-  }
+  color: #878787;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
   
   li {
     list-style: none;
@@ -67,6 +73,7 @@ h1 {
     font-size: 16px;
     font-weight: 100;
     line-height: 19px;
+    text-transform: capitalize;
  }
 
  .temperature {
@@ -85,9 +92,7 @@ h1 {
   top: -20px  
     
  }
-.container{
-    
-}
+
 
  .col{
     padding: 5px;
