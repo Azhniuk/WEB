@@ -1,18 +1,24 @@
 function searchWeather(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = `${Math.round(
-    response.data.main.temp
-  )}°C`;
+  document.querySelector("#temperature").innerHTML = `${Math.round(response.data.main.temp)}°C`;
+  document.querySelector("#humidity").innerHTML = `${response.data.main.humidity}%`;
+  document.querySelector("#wind").innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
+
+  document.querySelector("#description").innerHTML = `${response.data.weather[0].description }`;
+
 }
+
+
 
 function search(event) {
   event.preventDefault();
   let cityName = document.querySelector("#city-input").value;
-
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(searchWeather);
+ 
 }
+
 
 
 
@@ -25,13 +31,20 @@ function draw() {
 }
 
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
+
+
+
 
 let apiKey = "9501a68da2d700b9b0fb729939635887";
 
-let cityName = document.querySelector("#city");
 
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", search);
+
+
+
+let cityName = document.querySelector("#city");
 let dateNow = document.querySelector("#date");
 let dayNow = document.querySelector("#day");
 let currentTime = new Date();

@@ -35,11 +35,14 @@
                   <span id="date">
                     Tuesday 16:00
                   </span>
-                </div>
+                  </div>
+                  <h2 id = "description">
+                    Sunny
+                  </h2>
 
                 <div class="clearfix weather-temperature">
                   <div>
-                    <span class = "temperature" id="temperature">
+                    <strong class = "temperature" id="temperature">
                       <image 
                       
                       src = "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
@@ -47,13 +50,13 @@
                       alt = "partly_cloudy"
                       />
                       
-                    20</span>
+                    20</strong>
 
 
-                   <span class = "additional">  
+                   <small class = "CF">  
                     <a href="#" id="celsius-link" class="active">°C</a> |
                     <a href="#" id="fahrenheit-link">°F</a>
-                   </span>
+                   </small>
 
 
                   </div>
@@ -67,13 +70,13 @@
             <div class="col">
               <ul>
                 <li>
-                  Precipitation: 0%
+                  Precipitation: <span id = "precipitation">0%</span> 
                 </li>
                 <li>
-                  Humidity: 77%
+                  Humidity: <span id = "humidity">77%</span>  
                 </li>
                 <li>
-                  Wind: 8 km/h
+                  Wind: <span id = "wind">8 km/h</span> 
                 </li>
               </ul>
               
@@ -110,4 +113,3 @@
 
 
 
-<!-- <canvas width = 52px height = 52px id = "canvas" class = "canvas "></canvas> -->
