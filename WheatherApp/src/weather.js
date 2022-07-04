@@ -1,5 +1,8 @@
 function searchWeather(response) {  //returns the real weather data
+  
+  
   console.log(response.data);
+  console.log(`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = `${Math.round(response.data.main.temp)}°C`;
   document.querySelector("#humidity").innerHTML = `${response.data.main.humidity}%`;
@@ -8,8 +11,21 @@ function searchWeather(response) {  //returns the real weather data
   document.querySelector("#description").innerHTML = `${response.data.weather[0].description }`;
 
 
- // document.querySelector("#today").innerHTML = dateForNow(response.data.dt*1000);
+
+  let iconElement = document.querySelector("#icon");
+  
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  
 }
+
+
+
+//iconElement.setAttribute("alt", response.data.weather[0].description);
+//getForecast(response.data.coord);   /${response.data.weather[0].icon}
+ 
 
 
 
@@ -42,6 +58,7 @@ let apiKey = "9501a68da2d700b9b0fb729939635887";
 
 
 
+
 let form = document.querySelector("#search-form");  //search form
 form.addEventListener("submit", search);
 
@@ -68,4 +85,8 @@ let days = [
 
 
 dateNow.innerHTML = `${days[dayNum]}  ${hours}:${minutes}`;
+
+
+
+
 
