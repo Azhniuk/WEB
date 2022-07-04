@@ -1,8 +1,11 @@
+
 function searchWeather(response) {  //returns the real weather data
   
   
   console.log(response.data);
   console.log(`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+  
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = `${Math.round(response.data.main.temp)}°C`;
   document.querySelector("#humidity").innerHTML = `${response.data.main.humidity}%`;
@@ -12,14 +15,23 @@ function searchWeather(response) {  //returns the real weather data
 
 
 
+
   let iconElement = document.querySelector("#icon");
   
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  
-}
+
+
+
+  }
+
+
+
+
+
+ 
 
 
 
@@ -29,15 +41,6 @@ function searchWeather(response) {  //returns the real weather data
 
 
 
-// function dateForNow(timeNow){
-//   let date = new Date(timeNow);
-//   let hours = date.getHours();
-//   let minutes = date.getMinutes();
-//   let day = date.getDay();
-//   return `${day} ${hours}:${minutes}`;
-// }
-
-
 function search(event) { //search the city 
   event.preventDefault();
   let cityName = document.querySelector("#city-input").value;
@@ -45,11 +48,6 @@ function search(event) { //search the city
   axios.get(apiUrl).then(searchWeather);
  
 }
-
-
-
-
-
 
 
 
@@ -85,6 +83,8 @@ let days = [
 
 
 dateNow.innerHTML = `${days[dayNum]}  ${hours}:${minutes}`;
+
+
 
 
 
