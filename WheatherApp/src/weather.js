@@ -23,7 +23,9 @@ function searchWeather(response) {  //returns the real weather data
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
-
+  iconElement.setAttribute(
+    "alt",
+    response.data.weather[0].description);
 
   }
 
@@ -35,7 +37,7 @@ function searchWeather(response) {  //returns the real weather data
 
 
 
-//iconElement.setAttribute("alt", response.data.weather[0].description);
+
 //getForecast(response.data.coord);   /${response.data.weather[0].icon}
  
 
