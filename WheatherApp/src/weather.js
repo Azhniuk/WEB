@@ -1,23 +1,21 @@
 
 function searchWeather(response) {  //returns the real weather data
-  
-  
-  console.log(response.data);
-  console.log(`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+
+  //console.log(response.data);
+  console.log(`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+  celsiusTemp = response.data.main.temp;
   
 
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = `${Math.round(response.data.main.temp)}°C`;
+  document.querySelector("#temperature").innerHTML = `${Math.round(celsiusTemp)}°C`;
   document.querySelector("#humidity").innerHTML = `${response.data.main.humidity}%`;
   document.querySelector("#wind").innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
 
   document.querySelector("#description").innerHTML = `${response.data.weather[0].description }`;
 
 
-
-
   let iconElement = document.querySelector("#icon");
-  
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -26,20 +24,8 @@ function searchWeather(response) {  //returns the real weather data
   iconElement.setAttribute(
     "alt",
     response.data.weather[0].description);
-
   }
 
-
-
-
-
- 
-
-
-
-
-//getForecast(response.data.coord);   /${response.data.weather[0].icon}
- 
 
 
 
@@ -53,9 +39,22 @@ function search(event) { //search the city
 
 
 
+function showFahrenheit(event){ //display C in F
+  event.preventDefault();
+
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32 ; 
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+
+}
+
+
+
 
 let apiKey = "9501a68da2d700b9b0fb729939635887";
 
+let fahrenheitlink = document.querySelector("#fahrenheit-link");
+fahrenheitlink.addEventListener("click", showFahrenheit);
 
 
 
@@ -85,6 +84,10 @@ let days = [
 
 
 dateNow.innerHTML = `${days[dayNum]}  ${hours}:${minutes}`;
+
+
+
+let celsiusTemp = null;
 
 
 
