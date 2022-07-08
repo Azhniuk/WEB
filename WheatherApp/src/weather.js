@@ -49,12 +49,24 @@ function showFahrenheit(event){ //display C in F
 }
 
 
+function showCelsius(event){ //display F in c
+  event.preventDefault();
+
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+
+}
+
+
 
 
 let apiKey = "9501a68da2d700b9b0fb729939635887";
 
-let fahrenheitlink = document.querySelector("#fahrenheit-link");
-fahrenheitlink.addEventListener("click", showFahrenheit);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsius);
 
 
 
