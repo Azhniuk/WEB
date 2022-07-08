@@ -127,4 +127,12 @@ ul {
   width: 64px;
 }
 
+.weather-temperature .active{
+  color:black;
+  cursor: default;
+  font-size: larger;
+}
 
+.weather-temperature .active:hover{
+  text-decoration: none;
+}

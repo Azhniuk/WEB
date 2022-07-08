@@ -1,19 +1,14 @@
 
 function searchWeather(response) {  //returns the real weather data
 
-  //console.log(response.data);
-  console.log(`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-
   celsiusTemp = response.data.main.temp;
   
-
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = `${Math.round(celsiusTemp)}°C`;
+  document.querySelector("#temperature").innerHTML = `${Math.round(celsiusTemp)}`;
   document.querySelector("#humidity").innerHTML = `${response.data.main.humidity}%`;
   document.querySelector("#wind").innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
 
   document.querySelector("#description").innerHTML = `${response.data.weather[0].description }`;
-
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
@@ -46,6 +41,9 @@ function showFahrenheit(event){ //display C in F
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32 ; 
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 
+  celsiusLink.classList.remove("active"); //remove the link
+  fahrenheitLink.classList.add("active"); //add the link 
+
 }
 
 
@@ -54,6 +52,9 @@ function showCelsius(event){ //display F in c
 
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
+
+  fahrenheitLink.classList.remove("active"); //remove the link
+  celsiusLink.classList.add("active"); //add the link
 
 }
 
@@ -96,6 +97,8 @@ let days = [
 
 
 dateNow.innerHTML = `${days[dayNum]}  ${hours}:${minutes}`;
+
+
 
 
 
