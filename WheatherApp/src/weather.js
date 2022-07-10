@@ -59,6 +59,49 @@ function showCelsius(event){ //display F in c
 }
 
 
+function showWeekForecast(){
+
+  let weekElement = document.querySelector("#week-forecast");
+  let weekHTML = `<div class = "row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tues", "Wed"];
+
+
+  days.forEach(function(day){
+    weekHTML = weekHTML + `
+    <div class = "col-2">
+      <div class = "week-date">
+          ${day}
+      </div>
+        
+        <image 
+                  src = "http://openweathermap.org/img/wn/04d@2x.png"
+                  id =""
+                  alt = ""
+                  
+                  class = ""
+                  width = "42"
+                  />
+        <div class = "week-temp">
+          <span class = "week-temp-min">12° </span>
+          <span class = "week-temp-max">16°</span>
+        </div>
+
+      </div>`
+    });
+    weekHTML = weekHTML +`</div>`
+    weekElement.innerHTML = weekHTML ;
+  }
+
+
+
+
+
+
+
+
+
+
+
 
 
 let apiKey = "9501a68da2d700b9b0fb729939635887";
@@ -100,9 +143,8 @@ dateNow.innerHTML = `${days[dayNum]}  ${hours}:${minutes}`;
 
 
 
-
-
 let celsiusTemp = null;
+showWeekForecast();
 
 
 
