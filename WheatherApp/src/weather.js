@@ -79,11 +79,12 @@ function showWeekForecast(response){    //forecast for a week
   let weekElement = document.querySelector("#week-forecast");
   let weekHTML = `<div class = "row">`;
 
-  forecast.forEach(function(forecastDay){
+  forecast.forEach(function(forecastDay, index){
+    if (index<6){
     weekHTML = weekHTML + `
     <div class = "col-2">
       <div class = "week-date">
-          ${forecastDay.dt}
+          ${formatDay(forecastDay.dt)}
       </div>
         
         <image 
@@ -95,14 +96,22 @@ function showWeekForecast(response){    //forecast for a week
                   width = "42"
                   />
         <div class = "week-temp">
-          <span class = "week-temp-min">${forecastDay.temp.min}° </span>
-          <span class = "week-temp-max">${forecastDay.temp.max}°</span>
+          <span class = "week-temp-min">${Math.round(forecastDay.temp.min)}° </span>
+          <span class = "week-temp-max">${Math.round(forecastDay.temp.max)}°</span>
         </div>
 
       </div>`
-    });
-    weekHTML = weekHTML +`</div>`
-    weekElement.innerHTML = weekHTML ;
+    }});
+    weekHTML = weekHTML +`</div>`;
+    weekElement.innerHTML = weekHTML;
+  }
+
+  function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let day = date.getDay();
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  
+    return days[day];
   }
 
 
