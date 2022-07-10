@@ -1,5 +1,5 @@
 
-function searchWeather(response) {  //returns the real weather data
+function searchWeather(response) {  //🟥returns the real weather data
 
   celsiusTemp = response.data.main.temp;
   
@@ -19,6 +19,17 @@ function searchWeather(response) {  //returns the real weather data
   iconElement.setAttribute(
     "alt",
     response.data.weather[0].description);
+
+    getWeekForecast(response.data.coord);
+
+    
+  }
+
+
+
+function getWeekForecast (coordinates){
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeekForecast);
   }
 
 
@@ -47,6 +58,7 @@ function showFahrenheit(event){ //display C in F
 }
 
 
+
 function showCelsius(event){ //display F in c
   event.preventDefault();
 
@@ -59,22 +71,23 @@ function showCelsius(event){ //display F in c
 }
 
 
-function showWeekForecast(){
+
+function showWeekForecast(response){    //forecast for a week
+
+  let forecast = response.data.daily;
 
   let weekElement = document.querySelector("#week-forecast");
   let weekHTML = `<div class = "row">`;
-  let days = ["Fri", "Sat", "Sun", "Mon", "Tues", "Wed"];
 
-
-  days.forEach(function(day){
+  forecast.forEach(function(forecastDay){
     weekHTML = weekHTML + `
     <div class = "col-2">
       <div class = "week-date">
-          ${day}
+          ${forecastDay.dt}
       </div>
         
         <image 
-                  src = "http://openweathermap.org/img/wn/04d@2x.png"
+                  src = "http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
                   id =""
                   alt = ""
                   
@@ -82,8 +95,8 @@ function showWeekForecast(){
                   width = "42"
                   />
         <div class = "week-temp">
-          <span class = "week-temp-min">12° </span>
-          <span class = "week-temp-max">16°</span>
+          <span class = "week-temp-min">${forecastDay.temp.min}° </span>
+          <span class = "week-temp-max">${forecastDay.temp.max}°</span>
         </div>
 
       </div>`
@@ -144,7 +157,7 @@ dateNow.innerHTML = `${days[dayNum]}  ${hours}:${minutes}`;
 
 
 let celsiusTemp = null;
-showWeekForecast();
+
 
 
 
