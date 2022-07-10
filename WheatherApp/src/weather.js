@@ -1,5 +1,6 @@
 
-function searchWeather(response) {  //🟥returns the real weather data
+function searchWeather(response) {  //🟥returns the weather data
+  console.log(response);
 
   celsiusTemp = response.data.main.temp;
   
@@ -21,24 +22,23 @@ function searchWeather(response) {  //🟥returns the real weather data
     response.data.weather[0].description);
 
     getWeekForecast(response.data.coord);
-
-    
   }
 
 
 
-function getWeekForecast (coordinates){
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showWeekForecast);
-  }
 
 
+
+
+  
 
 
 function search(event) { //search the city 
   event.preventDefault();
   let cityName = document.querySelector("#city-input").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+
+  console.log(apiUrl);
   axios.get(apiUrl).then(searchWeather);
  
 }
@@ -102,9 +102,18 @@ function showWeekForecast(response){    //forecast for a week
 
       </div>`
     }});
+
+
     weekHTML = weekHTML +`</div>`;
     weekElement.innerHTML = weekHTML;
   }
+
+
+  function getWeekForecast (coordinates){
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(showWeekForecast);
+    }
+
 
   function formatDay(timestamp) {
     let date = new Date(timestamp * 1000);
@@ -166,8 +175,6 @@ dateNow.innerHTML = `${days[dayNum]}  ${hours}:${minutes}`;
 
 
 let celsiusTemp = null;
-
-
 
 
 
