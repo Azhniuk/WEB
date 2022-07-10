@@ -11,6 +11,7 @@ form{
     
 }
 
+
 a{
     color:black;
 }
@@ -45,10 +46,15 @@ a{
 
 
 .card{
-    top: 16px;
+    top: 12px;
     width: 36em;
     margin: 0 auto;
+    
 
+}
+
+.container{
+  padding: 10px;
 }
 body {
   font-family: arial, sans-serif;
@@ -135,4 +141,21 @@ ul {
 
 .weather-temperature .active:hover{
   text-decoration: none;
+}
+
+
+.week-forecast{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.week-date{
+  font-size: 16px;
+  color:black;
+  opacity: 0.6;
+}
+
+.week-temp{
+  font-size: 12px;
+  opacity: 0.65;
 }
