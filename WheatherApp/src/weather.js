@@ -1,6 +1,9 @@
 
 function searchWeather(response) {  //🟥returns the weather data
-  console.log(response);
+  
+
+  fahrenheitLink.classList.remove("active"); //remove the link
+  celsiusLink.classList.add("active"); //add the link
 
   celsiusTemp = response.data.main.temp;
   
@@ -38,14 +41,13 @@ function search(event) { //search the city
   let cityName = document.querySelector("#city-input").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
-  console.log(apiUrl);
   axios.get(apiUrl).then(searchWeather);
  
 }
 
 
 
-function showFahrenheit(event){ //display C in F
+function showFahrenheit(event){ //display F
   event.preventDefault();
 
   let temperatureElement = document.querySelector("#temperature");
@@ -59,7 +61,7 @@ function showFahrenheit(event){ //display C in F
 
 
 
-function showCelsius(event){ //display F in c
+function showCelsius(event){ //display c
   event.preventDefault();
 
   let temperatureElement = document.querySelector("#temperature");
