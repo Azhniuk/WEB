@@ -45,6 +45,12 @@ function search(event) { //search the city
  
 }
 
+function S() { //search the week foecast at first
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Kyiv&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(searchWeather);
+ 
+}
+
 
 
 function showFahrenheit(event){ //display F
@@ -177,6 +183,8 @@ dateNow.innerHTML = `${days[dayNum]}  ${hours}:${minutes}`;
 
 
 let celsiusTemp = null;
+
+S();
 
 
 
