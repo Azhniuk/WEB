@@ -11,24 +11,36 @@
 
 container{
     text-align: center;
+
+}
+
+a{
+    text-decoration:none;
+    color: var(--red-color);
+
+}
+a:hover{
+    text-decoration:none;
+    color: var(--red-color);
+
 }
 
 
+/*
 a:hover{
-    text-decoration: underline;
     color:rgb(89, 0, 255);
 }
 
 a:visited{
-    color: black;
-}
+    color: black;*/
+
 
 h1{
     color: var(--font-color);
 }
 
 h2{
-    font-size: 40px;
+    font-size:60px;
 }
 p{
     font-weight: bold;
@@ -38,6 +50,7 @@ p{
 
 .iam{
     align-items: center;
+    margin:25px;
     
 }
 
