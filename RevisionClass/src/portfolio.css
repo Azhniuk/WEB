@@ -45,9 +45,6 @@ h1{
 h2{
     font-size:60px;
 }
-p{
-    font-weight: bold;
-}
 
 
 
@@ -78,15 +75,42 @@ p{
 
 }
 
-.info{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    margin:10px;
-}
-
 .about{
     font-size: 100px;
     font-weight: bold;
     margin:10px;
+}
+
+
+.info{    
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.info p{
+    margin: 10px;
+    padding: 15px;
+    background: var(--byellow);
+
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.contact{
+    font-size: 25px;
+    margin:20px;
+
 }
