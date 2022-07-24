@@ -1,0 +1,63 @@
+:root{
+    --font-color: #000702;
+    --dark-green: #1f2c13;
+    --green:#5d612e;
+    --red-color: #a94802;
+    --yellow:#d4903b;
+    --byellow:#f7d6ad;
+
+
+}
+
+container{
+    text-align: center;
+}
+
+
+a:hover{
+    text-decoration: underline;
+    color:rgb(89, 0, 255);
+}
+
+a:visited{
+    color: black;
+}
+
+h1{
+    color: var(--font-color);
+}
+
+h2{
+    font-size: 40px;
+}
+p{
+    font-weight: bold;
+}
+
+
+
+.iam{
+    align-items: center;
+    
+}
+
+.button:hover {
+    color:rgb(255, 255, 255);
+    background-color:   var(--byellow);
+    cursor: pointer;
+}
+
+.button {   
+    font-style: italic;
+    background-color: rgb(255, 255, 255);
+    color: var(--red-color);
+    padding: 15px 40px 15px;
+    margin:10px;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.2s ease-in-out; 
+    box-shadow: 2px 1.5px 1.5px rgba(113, 19, 0, 0.549);
+
+}
