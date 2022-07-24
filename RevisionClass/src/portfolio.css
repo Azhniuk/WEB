@@ -11,12 +11,14 @@
 
 container{
     text-align: center;
+    
 
 }
 
 a{
     text-decoration:none;
     color: var(--red-color);
+    margin: 5px;
 
 }
 a:hover{
@@ -37,6 +39,7 @@ a:visited{
 
 h1{
     color: var(--font-color);
+    font-size: 40px;
 }
 
 h2{
@@ -50,7 +53,7 @@ p{
 
 .iam{
     align-items: center;
-    margin:25px;
+    margin:0.75% 15% 1%;
     
 }
 
@@ -73,4 +76,17 @@ p{
     transition: all 0.2s ease-in-out; 
     box-shadow: 2px 1.5px 1.5px rgba(113, 19, 0, 0.549);
 
+}
+
+.info{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin:10px;
+}
+
+.about{
+    font-size: 100px;
+    font-weight: bold;
+    margin:10px;
 }
