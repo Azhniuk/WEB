@@ -1,7 +1,20 @@
+:root{
+    --font-color: #000702;
+    --dark-green: #1f2c13;
+    --green:#5d612e;
+    --red-color: #a94802;
+    --yellow:#d4903b;
+    --byellow:#f7d6ad;
 
-div{
-    margin:10px;
+
 }
+
+
 h1{
     color: blue;
+}
+
+.contact-info{
+    background-color: var(--yellow);
+
 }
