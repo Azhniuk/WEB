@@ -6,14 +6,19 @@
     --yellow:#d4903b;
     --byellow:#f7d6ad;
 
-
 }
 
-container{
-    text-align: center;
-    
 
+
+h1{
+    color: var(--font-color);
+    font-size: 40px;
 }
+
+h2{
+    font-size:60px;
+}
+
 
 a{
     text-decoration:none;
@@ -28,30 +33,9 @@ a:hover{
 }
 
 
-/*
-a:hover{
-    color:rgb(89, 0, 255);
-}
-
-a:visited{
-    color: black;*/
-
-
-h1{
-    color: var(--font-color);
-    font-size: 40px;
-}
-
-h2{
-    font-size:60px;
-}
-
-
-
 .iam{
     align-items: center;
-    margin:0.75% 15% 1%;
-    
+    margin:0.75% 15% 1%;   
 }
 
 .button:hover {
@@ -113,4 +97,9 @@ p {
     font-size: 25px;
     margin:20px;
 
+}
+
+
+.logo{
+    max-width: 130px;
 }
