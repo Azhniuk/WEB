@@ -1,4 +1,5 @@
-function aboutClick(){
-    console.log("Hello"); 
+
+function openLink(link){
+    window.open(link);
 
 }
