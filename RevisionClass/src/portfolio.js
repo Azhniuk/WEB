@@ -1,5 +1,5 @@
 
 function openLink(link){
-    window.open(link);
+    window.open(link, "_self");
 
 }

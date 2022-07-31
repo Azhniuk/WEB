@@ -11,6 +11,8 @@
 
 
 
+
+
 h1{
     color: var(--font-color);
     font-size: 40px;
@@ -33,11 +35,6 @@ a:hover{
 
 }
 
-
-.iam{
-    align-items: center;
-    margin:0.75% 15% 1%;   
-}
 
 .button:hover {
     color:rgb(255, 255, 255);
@@ -102,5 +99,14 @@ p {
 
 
 .logo{
-    max-width: 130px;
+    max-width: 90px;
+}
+
+.container{
+    max-width: 94%;
+}
+
+
+.mt-120 {
+    margin-top: 120px;
 }
