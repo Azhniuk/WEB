@@ -1,0 +1,183 @@
+<head>
+    <style>
+        section{
+            background-color: rgba(255, 255, 255, 0.6);
+            margin: 10px;
+        }
+        .first{
+           /* background-image: url("https://pbs.twimg.com/media/DkGHRQDXcAA4Hdb?format=jpg&name=large");*/
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            backdrop-filter: blur(2px);
+            background: linear-gradient(#014e1f, #055d27, #f8c52de2)
+         }
+
+
+        header{
+            margin: 100px;
+            padding: 20px 70px; 
+        }
+        h1{
+            font-size: 30px;
+            font-style:italic;
+            text-align:left;
+            margin: 25px;
+            padding: 30px 75px 0px 70px;
+        }
+        .main{
+            width: 880;
+            line-height:27pxpx;
+            font-size: 24px;
+            text-align:justify;
+            font-style: italic;
+            margin: 25px;
+            padding: 0px 70px;
+            font-weight: 500;
+        }
+
+        img{
+            display: block;
+            margin: 0px 100px 70px ;
+            width: 800;
+            border: 2mm ridge rgba(2, 99, 25, 0.4);
+        }
+
+
+        .yes{
+            position: absolute;
+            bottom: 100px;
+            right: 120px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(1, 93, 23);
+            padding: 15px 40px 15px;
+            text-align: center;
+            font-weight: 600;
+            border-radius: 40px;
+            outline: none;
+            transition: all 0.2s ease-in-out; 
+            box-shadow: 5px 3px 3px rgb(0, 0, 121);
+
+        }
+        .topright {
+            position: absolute;
+            top: 100px;
+            right: 170px;
+            font-size: 20px;
+            font-style: italic;
+            background-color: rgb(255, 255, 255);
+            color: rgb(1, 93, 23);
+            padding: 15px 40px 15px;
+            text-align: center;
+            font-weight: 700;
+            border-radius: 40px;
+            outline: none;
+            transition: all 0.2s ease-in-out; 
+            box-shadow: 5px 3px 3px rgb(0, 0, 121);
+
+
+}
+
+.glow-button:hover {
+      color:rgb(255, 255, 255);
+      background-color:  rgb(1, 93, 23);
+      cursor: pointer;
+}
+span{
+    font-weight:600;
+}
+a:link{
+    font-weight: bolder;
+    color:rgb(1, 109, 1);
+}
+a:visited{
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+}
+
+.addt{
+    text-align: justify;
+    position: absolute;
+    bottom: 150px;
+    right: 100px;
+    width: 400;
+    font-size: 24px;
+    font-style: italic;
+}
+     
+        
+
+
+    </style>
+
+</head>
+
+<body class = "first">
+
+   <section>
+    <div>
+        
+        <h1><em>TARAKANIV FORT</em></h1>
+    
+        
+        <button onclick="Newt()" class="topright glow-button"> Watch video!</button>
+
+    </div>
+    <h2 class = "main">Aristocratic Dubno fortress resembles British colonial architecture with its exquisite lines,
+    the same flow of the outline, a great number of arcades and architectural decoration. </br>An excellent landmark of the
+    fortification art of the 19th century located in the suburbs of Tarakaniv village, <span>Rivne</span> oblast, is abandoned today, and
+    thus is the most mystic destination in Ukraine.
+    </br> <span>Don't miss the
+    opportunity to get inside through a 100-meter long tunnel!</span></br><hr>
+    <a href="https://vidviday.ua/blog/en/tarakaniv-fort-the-hunted-place/" target="_blank"> Learn more here </a>
+    
+   
+
+    </h2>
+
+<p class = "addt">In the 19th century, it was built by imperial government to protect the Kyiv - Lviv railway.</br>
+The construction has a rhombus shape with sides of about <strong>240 meters.</strong> Outer walls of the fort are now almost
+indistinguishable from the outside. But if you get to the inner area, everything looks pretty good.</br><span>Today</span> the fortress, being taken over by time and physical factors, fell into disrepute. People wander around by day; at
+night the sounds of a ghostly combat march is heard...</p>
+
+    <img src = "https://tamtour.com.ua/local/image/333/009/tarakanovskij-fort-tarakanovskij-fort-ukraina-tarakanovskij-fort-ekskursiya-tarakanovskij-fort-prizr-5803e3d4019b1-900@.jpg">
+</br>
+
+
+
+ <button class ="yes glow-button">Click here if you need a tour guide</button> 
+
+
+</section>
+
+
+<script>
+    function tourGuide(){
+        let name = prompt("What is your name?");
+        let age = prompt("What is your age");
+        if (age >= 18) {
+            let num = prompt("What is your phone number?");
+        }
+        else {
+            let num = prompt("What is your parents` phone number?");
+        }
+        alert("We will contact you soon, " + name + "😊");
+
+    }
+
+    function Newt() {
+            window.open("https://www.youtube.com/watch?v=g49rOwtDPoY");
+        }
+
+    function video(){
+
+    }
+
+    let butt = document.querySelector(".yes");
+    butt.addEventListener("click", tourGuide);
+
+
+    
+</script>
+
+
+</body>
