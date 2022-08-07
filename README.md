@@ -1,10 +1,10 @@
 # SheCodesR
 
-1. Weather app (WeatherApp)
-July 2022 
+1. Weather app (WeatherApp)<br />
+July 2022 <br />
 🔰 link: https://weather4811.netlify.app/
 
-2. Portfolio (RevisionClass)
+2. Portfolio (RevisionClass)<br />
 August 2022 
 🔰 link: https://azhniuk.netlify.app/
 
