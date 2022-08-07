@@ -9,13 +9,10 @@
 
 }
 
-@media (max-width: 600px){
-    h3{
-        display:none;
-    }
-}
 
 
+
+  
 
 
 
@@ -116,3 +113,25 @@ p {
 .mt-120 {
     margin-top: 120px;
 }
+
+
+@media (max-width: 576px) {
+
+    .img-fluid {
+          display:none;
+        }
+    body{
+        text-align: center;
+        align-content: center;
+    }
+    
+    h1 {
+        font-size: 48px;
+      }
+    
+    h2 {
+        font-size: 32px;
+      }
+    
+    
+    }
