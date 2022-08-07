@@ -133,5 +133,14 @@ p {
         font-size: 32px;
       }
     
+    .main-buttons{
+        font-size: 16px ;       
+        display: inline-block;
+        
+    }
+    
+    .button{
+        padding: 13px;
+    }
     
     }
