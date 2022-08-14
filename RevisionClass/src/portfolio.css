@@ -13,12 +13,17 @@
 
 
   
+h1, h2, h3{
+    font-family: 'Playfair Display', serif;
+}
+
 
 
 
 h1{
     color: var(--font-color);
-    font-size: 40px;
+    font-weight: 700;
+    font-size: 96px;
 }
 
 h2{
